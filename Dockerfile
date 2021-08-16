@@ -1,6 +1,6 @@
-FROM nginx:alpine
+FROM nginxinc/nginx-unprivileged
 
-RUN cp default.conf /etc/nginx/conf.d/default.conf
-RUN cp index.html /usr/share/nginx/html
-RUN cp health /usr/share/nginx/html
+COPY default.conf /etc/nginx/conf.d/default.conf
+COPY cp index.html /usr/share/nginx/html
+COPY cp health /usr/share/nginx/html
 
