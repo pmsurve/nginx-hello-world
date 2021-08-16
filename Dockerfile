@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-COPY default.conf /etc/nginx/conf.d/default.conf
-COPY index.html /usr/share/nginx/html
-COPY health /usr/share/nginx/html
+RUN cp default.conf /etc/nginx/conf.d/default.conf
+RUN cp index.html /usr/share/nginx/html
+RUN cp health /usr/share/nginx/html
 
